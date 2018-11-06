@@ -1,5 +1,13 @@
 {
     "require": {
         "illuminate/database": "^5.7"
+    },
+    "autoload": {
+        "files": [
+            "app/config/config.php",
+            "app/libraries/Core.php",
+            "app/libraries/Controller.php",
+            "app/libraries/Database.php"
+        ]
     }
 }

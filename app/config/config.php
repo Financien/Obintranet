@@ -10,9 +10,9 @@ define("DB_NAME", "_YOUR_DBNAME_");
 define("APPROOT",dirname(dirname(__FILE__)));
 
 //URL ROOT
-define("URLROOT",'YOUR_URL_');
+define("URLROOT",'http://localhost/Work/Intranet/');
 
 
 //SITE NAME
-define('SITENAME', '_YOUR_SITENAME_')
+define('SITENAME', 'Intranet')
 ?>
