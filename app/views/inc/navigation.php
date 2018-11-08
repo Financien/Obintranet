@@ -35,7 +35,7 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#">HUBA</a>
-                <a class="dropdown-item" href="#">Evenementen</a>
+                <a class="dropdown-item" href="<?= URLROOT ?>activiteiten/evenementen">Evenementen</a>
                 <a class="dropdown-item" href="#">Jubilarisen</a>
                 <a class="dropdown-item" href="#">Gepensioneerden</a>
                 <a class="dropdown-item" href="#">Mijlpalen</a>
