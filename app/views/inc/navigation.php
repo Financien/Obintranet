@@ -25,9 +25,9 @@
                 Personeelzaken
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Personeelswet</a>
-                <a class="dropdown-item" href="#">Studie</a>
-                <a class="dropdown-item" href="#">Algemene Regels</a>
+                <a class="dropdown-item" href="<?= URLROOT ?>personeelzaken/personeelswet">Personeelswet</a>
+                <a class="dropdown-item" href="<?= URLROOT ?>personeelzaken/studie">Studie</a>
+                <a class="dropdown-item" href="<?= URLROOT ?>personeelzaken/algemeneregels">Algemene Regels</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -45,7 +45,7 @@
                 ICT
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">ICT Regels</a>
+                <a class="dropdown-item" href="<?= URLROOT ?>ICT/ictregels">ICT Regels</a>
             </li>
             <li class="nav-item">
               <a class="nav-link " href="#">Personeelsbond</a>

@@ -23,29 +23,23 @@ quis rutrum orci pulvinar et.
 </div>
 
 
-<div class="section">
-<div class="col-md-12">
-<div class ="mt-5">
-<div class="row">
-  <div class="col-md-4">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet neque id nisi mollis maximus. 
-        Suspendisse sagittis et nulla quis dictum.</p>
-      
-      </div>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-3">
+            <img class="img img-fluid rounded-circle" src="https://picsum.photos/g/300" alt="">
+        </div>
+        <div class="col-md-9">
+            <div class="ml-5">
+            <h3>Lorem Ipsum</h3>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec erat in est interdum eleifend.
+             Donec at pulvinar ligula. Sed ut dignissim libero. Vivamus quis sagittis purus, quis dapibus ipsum. 
+             Aenean dapibus mi at dignissim ornare. Fusce eu libero tellus. Suspendisse eget consectetur diam,
+             at commodo risus. Duis dapibus aliquet tristique. In varius elit sed risus ullamcorper varius. 
+             Aenean ornare, nulla in fringilla lobortis, quam metus viverra justo, dictum porttitor tellus felis a libero.</p>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-</div>
-
-  <div class="col-md-4">
-<img src="https://picsum.photos/300/300" class="img-fluid" alt="Test image">
-      
-</div>
-
-
 
 
 
