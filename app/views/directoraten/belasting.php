@@ -24,12 +24,14 @@ require APPROOT . '/views/inc/header.php';
         <table id="myTable" class="table" >
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
+                <th>Department</th>
+                <th>Dienstonderdeel</th>
+                <th>Locatie</th>
+                <th>Achternaam</th>
+                <th>Voornaam</th>
+                <th>Gender</th>
+                <th>Functieomschrijving</th>
+                <th>Email<th>
             </tr>
             </thead>
             <tbody>
