@@ -1,5 +1,6 @@
 <header>
-      <nav class="navbar navbar-expand-md navbar-white bg-white text-dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
         <a class="navbar-brand" href="#">
           <img src="https://via.placeholder.com/70x50" alt="">
         </a>
