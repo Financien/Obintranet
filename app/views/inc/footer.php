@@ -1,7 +1,22 @@
 </main>
-<footer class="footer">
+<footer class="footer mt-3 bg-dark text-white">
       <div class="container">
-        <span class="text-muted">Place sticky footer content here.</span>
+        <div class="col">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+        </div>
       </div>
     </footer>
 </body>
