@@ -1,22 +1,49 @@
 </main>
 <footer class="footer mt-3 bg-dark text-white">
       <div class="container">
-        <div class="col">
-        <ul class="nav flex-column">
-            <li class="nav-item">
-                <a class="nav-link active" href="#">Active</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-        </ul>
+       <div class="row">
+       <div class="col-md-4">
+            <h5 class="mt-2">Over Intranet</h5>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia dolor repudiandae odit cupiditate molestiae. Ex, itaque. Quo, illum. Quisquam, earum.</p>
         </div>
+        <div class="col-md-4">
+            <h5 class="mt-2">Quick Links</h5>
+            <hr>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h5 class="mt-2">Quick Links</h5>
+            <hr>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="row mx-auto mt-2">
+            <p class="text-center">
+                Copyright 2000
+            </p>
+        </div>
+       </div>
       </div>
     </footer>
 </body>
