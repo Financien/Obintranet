@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="<?= URLROOT; ?>">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="<?= URLROOT; ?>"><i class="fas fa-home"></i> Home</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -49,7 +49,7 @@
                 <a class="dropdown-item" href="<?= URLROOT ?>ICT/ictregels">ICT Regels</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="#">Personeelsbond</a>
+              <a class="nav-link " href="<?= URLROOT ?>personeelbond">Personeelsbond</a>
             </li>
             <li class="nav-item">
               <a class="nav-link " href="#">Vacatures</a>

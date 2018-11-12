@@ -87,19 +87,14 @@ $(document).ready( function () {
     });
 
       $("#eventCalender").fullCalendar({
-            header: {
-                left:   'title',
-                center: 'today',
-                right:  ' prev,next'
-            },
             defaultView: 'month',
-            themeSystem: "bootstrap4",
-            locale: "nl"
+            locale: "nl",
+            height: 1650
         });
         $('.jubilarrisen').slick({
             infinite: true,
             dots: true,
-            slidesToShow: 4,
+            slidesToShow: 3,
             slidesToScroll: 3
         });
 } );
