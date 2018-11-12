@@ -35,8 +35,7 @@ quis rutrum orci pulvinar et.
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec erat in est interdum eleifend.
              Donec at pulvinar ligula. Sed ut dignissim libero. Vivamus quis sagittis purus, quis dapibus ipsum. 
              Aenean dapibus mi at dignissim ornare. Fusce eu libero tellus. Suspendisse eget consectetur diam,
-             at commodo risus. Duis dapibus aliquet tristique. In varius elit sed risus ullamcorper varius. 
-             Aenean ornare, nulla in fringilla lobortis, quam metus viverra justo, dictum porttitor tellus felis a libero.</p>
+             at commodo risus. Duis dapibus aliquet tristique.</p>
             </div>
         </div>
     </div>
@@ -55,9 +54,7 @@ quis rutrum orci pulvinar et.
         Suspendisse sagittis et nulla quis dictum. Vivamus dolor ipsum, consequat ut ipsum eu, gravida tempor nisi. Proin et laoreet tellus, 
         eu sodales lorem. Nunc laoreet egestas urna. Curabitur vel nisi nibh. Nulla a posuere sapien. Nulla facilisi. Lorem ipsum dolor sit amet, 
         consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce imperdiet 
-        posuere metus sed euismod. Cras vel ultricies ex. Integer luctus metus at bibendum porttitor. Donec porta, arcu convallis interdum lacinia, 
-        enim mauris molestie nisi, ut egestas lorem tortor eget dolor. Ut tempus vulputate urna, nec congue justo iaculis tincidunt. Donec sollicitudin a lacus quis placerat.
-        Morbi a dictum lectus. In hac habitasse platea dictumst. Fusce porta ipsum id venenatis tempor. Integer tempus eros tortor, quis rutrum orci pulvinar et.</p>
+        posuere metus sed euismod. Cras vel ultricies ex. Integer luctus metus at bibendum porttitor.</p>
       
       </div>
     </div>
@@ -70,13 +67,19 @@ quis rutrum orci pulvinar et.
         Suspendisse sagittis et nulla quis dictum. Vivamus dolor ipsum, consequat ut ipsum eu, gravida tempor nisi. Proin et laoreet tellus, 
         eu sodales lorem. Nunc laoreet egestas urna. Curabitur vel nisi nibh. Nulla a posuere sapien. Nulla facilisi. Lorem ipsum dolor sit amet, 
         consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce imperdiet 
-        posuere metus sed euismod. Cras vel ultricies ex. Integer luctus metus at bibendum porttitor. Donec porta, arcu convallis interdum lacinia, 
-        enim mauris molestie nisi, ut egestas lorem tortor eget dolor. Ut tempus vulputate urna, nec congue justo iaculis tincidunt. Donec sollicitudin a lacus quis placerat.
-        Morbi a dictum lectus. In hac habitasse platea dictumst. Fusce porta ipsum id venenatis tempor. Integer tempus eros tortor, quis rutrum orci pulvinar et.</p>
+        posuere metus sed euismod. Cras vel ultricies ex. Integer luctus metus at bibendum porttitor.</p>
        
       </div>
     </div>
   </div>
+  <div class="container mt-3">
+    <div class="row">
+        <div class="col">
+            <img class=".img-fluid. max-width: 100%" src="https://picsum.photos/g/520/300?image=1033" alt="">
+       </div>
+       <div class="col">
+       <img class=".img-fluid. max-width: 100%" src="https://picsum.photos/g/520/305?image=18" alt="">
+        </div>
 </div>
 </div>
 </div>
