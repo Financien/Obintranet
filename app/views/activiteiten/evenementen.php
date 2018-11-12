@@ -1,4 +1,3 @@
-
 <?php
 require APPROOT . '/views/inc/header.php';
 ?>
@@ -11,10 +10,9 @@ require APPROOT . '/views/inc/header.php';
         </div>
     </div>
     <div class="row">
-       <div class="col">
-       <div id="eventCalender">
+        <div class="col">
+            <div id="eventCalender"></div>
         </div>
-       </div>
     </div>
 </div>
 
