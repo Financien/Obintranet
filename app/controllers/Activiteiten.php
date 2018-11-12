@@ -10,6 +10,11 @@
      {
      }
 
+     public function huba()
+     {
+         $this->view('activiteiten/huba');
+     }
+
      public function evenementen()
      {
          $this->view('activiteiten/evenementen');
