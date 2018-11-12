@@ -12,7 +12,7 @@ define("DB_DRIVER", "_DRIVER_");
 define("APPROOT", dirname(dirname(__FILE__)));
 
 //URL ROOT
-define("URLROOT", 'http://localhost/Work/Intranet/');
+define("URLROOT", 'http://localhost/intranet/');
 
 
 //SITE NAME
