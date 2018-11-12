@@ -12,6 +12,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/locale/nl.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 <script src="js/main.js"></script>
 
 <script>
@@ -51,6 +53,12 @@ $(document).ready( function () {
             defaultView: 'month',
             themeSystem: "bootstrap4",
             locale: "nl"
+        });
+        $('.jubilarrisen').slick({
+            infinite: true,
+            dots: true,
+            slidesToShow: 3,
+            slidesToScroll: 3
         });
 } );
 </script>

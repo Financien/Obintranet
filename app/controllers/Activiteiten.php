@@ -14,4 +14,8 @@
      {
          $this->view('activiteiten/evenementen');
      }
+     public function jubilarisen()
+     {
+         $this->view('activiteiten/jubilarisen');
+     }
  }
