@@ -17,9 +17,9 @@
                 Directoraat
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="<?= URLROOT ?>directoraten/belasting">Directoraat Belastingen</a>
-                <a class="dropdown-item" href="<?= URLROOT ?>directoraten/financien">Directoraat Financien</a>
-                <a class="dropdown-item" href="<?= URLROOT ?>directoraten/plof">Directoraat PLOF</a>
+                <a class="dropdown-item" href="<?= URLROOT ?>directoraten/directoraat/2">Directoraat Belastingen</a>
+                <a class="dropdown-item" href="<?= URLROOT ?>directoraten/directoraat/3">Directoraat Financien</a>
+                <a class="dropdown-item" href="<?= URLROOT ?>directoraten/directoraat/4">Directoraat PLOF</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -1,27 +1,22 @@
 <?php
- class Directoraten extends Controller
- {
-     public function __construct()
-     {
-     }
+class Directoraten extends Controller
+{
+    public function __construct()
+    {
+        $this->directoraatModel = $this->model('Directoraat');
+        $this->werknemerModel = $this->model('Werknemer');
+    }
 
 
-     public function index()
-     {
-     }
+    public function directoraat($id)
+    {
+        $directoraat = $this->directoraatModel->getDirectoraatById($id);
+        $werknemers = $this->werknemerModel->getWerknemersByDirectoraatId($id);
 
-     public function belasting()
-     {
-         $this->view('directoraten/belasting');
-     }
-
-     public function financien()
-     {
-         $this->view('directoraten/financien');
-     }
-
-     public function plof()
-     {
-         $this->view('directoraten/plof');
-     }
- }
+        $data = [
+            'directoraat' => $directoraat,
+            'werknemers' => $werknemers
+        ];
+        $this->view('directoraten/index', $data);
+    }
+}

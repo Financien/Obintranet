@@ -8,9 +8,9 @@ require APPROOT . '/views/inc/header.php';
         </div>
         <div class="col-md-9">
             <div class="ml-5">
-            <h3>::Directoraat Naam</h3>
+            <h3><?= $data['directoraat']->directoraat; ?></h3>
             <hr>
-            <p>::Directoraat beschrijving</p>
+            <p><?= $data['directoraat']->beschrijving; ?></p>
             </div>
         </div>
     </div>
@@ -21,21 +21,31 @@ require APPROOT . '/views/inc/header.php';
     </div>
     <div class="row">
         <div class="col">
-        <table id="myTable" class="table" >
+        <table id="myTable" class="table table-responsive   " >
         <thead>
             <tr>
-                <<th>Department</th>
+                <th>Department</th>
                 <th>Dienstonderdeel</th>
-                <th>Locatie</th>
                 <th>Achternaam</th>
                 <th>Voornaam</th>
                 <th>Gender</th>
                 <th>Functieomschrijving</th>
-                <th>Email<th>
+                <th>Email</th>
             </tr>
             </thead>
             <tbody>
+            <?php foreach ($data['werknemers'] as $werknemer) : ?>
+                <tr>
+                    <td><?php echo $werknemer->afdeling_id ?></td>
+                    <td><?php echo $werknemer->functie ?></td>
+                    <td><?php echo $werknemer->naam ?></td>
+                    <td><?php echo $werknemer->voornaam ?></td>
+                    <td><?php echo $werknemer->gender_id ?></td>
+                    <td><?php echo $werknemer->functie ?></td>
+                    <td><?php echo $werknemer->email ?></td>
 
+                </tr>
+                <?php endforeach; ?>
             </tbody>
         </table>
         </div>

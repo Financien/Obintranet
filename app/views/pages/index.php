@@ -133,6 +133,7 @@ require APPROOT . '/views/inc/header.php';
       </div>
     </div>
   </section>
+
 </div>
 <?php
 require APPROOT . '/views/inc/footer.php';
