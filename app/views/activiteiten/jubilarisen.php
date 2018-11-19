@@ -10,58 +10,42 @@ require APPROOT . '/views/inc/header.php';
     </div>
   </div>
   <div class="row">
-    <div class="col">
-      <div class="jubilarrisen">
-        <div class="col-md-3">
-          <div class="card">
-            <img class="card-img-top" src="https://via.placeholder.com/300" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
+        <div class="col">
+        <table id="myTable" class="table table-responsive   " >
+        <thead>
+            <tr>
+                <th>Department</th>
+                <th>Dienstonderdeel</th>
+                <th>Achternaam</th>
+                <th>Voornaam</th>
+                <th>Gender</th>
+                <th>Functieomschrijving</th>
+                <th>Email</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($data['jubilarissen'] as $werknemer) : ?>
+               <?php if (in_array($werknemer->dienstjaar, $data['jaren'])) : ?>
+               <tr>
+                    <td><?php echo $werknemer->dienstjaar ?></td>
+                    <td><?php echo $werknemer->functie ?></td>
+                    <td><?php echo $werknemer->naam ?></td>
+                    <td><?php echo $werknemer->voornaam ?></td>
+                    <td><?php echo $werknemer->gender_id ?></td>
+                    <td><?php echo $werknemer->functie ?></td>
+                    <td><?php echo $werknemer->email ?></td>
+
+                </tr>
+<?php endif; ?>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
         </div>
-        <div class="col-md-3">
-          <div class="card">
-            <img class="card-img-top" src="https://via.placeholder.com/300" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <img class="card-img-top" src="https://via.placeholder.com/300" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <img class="card-img-top" src="https://via.placeholder.com/300" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
 </div>
 </div>
 
 <?php
+
 require APPROOT . '/views/inc/footer.php';
 ?>

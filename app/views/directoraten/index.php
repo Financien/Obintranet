@@ -11,6 +11,13 @@ require APPROOT . '/views/inc/header.php';
             <h3><?= $data['directoraat']->directoraat; ?></h3>
             <hr>
             <p><?= $data['directoraat']->beschrijving; ?></p>
+            <div class="mt-5">
+                <span><i class="fas fa-map-marker-alt"></i> Adres. : <?= $data['directoraat']->adress; ?></span>
+                <br>
+                <span><i class="fas fa-phone"></i> Telefoonnr. : <?= $data['directoraat']->telefoon; ?></span>
+
+
+            </div>
             </div>
         </div>
     </div>
@@ -36,7 +43,7 @@ require APPROOT . '/views/inc/header.php';
             <tbody>
             <?php foreach ($data['werknemers'] as $werknemer) : ?>
                 <tr>
-                    <td><?php echo $werknemer->afdeling_id ?></td>
+                    <td><?php echo date('Y') - date('Y', strtotime($werknemer->dienstjaar)) ?></td>
                     <td><?php echo $werknemer->functie ?></td>
                     <td><?php echo $werknemer->naam ?></td>
                     <td><?php echo $werknemer->voornaam ?></td>

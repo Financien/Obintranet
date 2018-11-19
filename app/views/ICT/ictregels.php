@@ -3,61 +3,37 @@ require APPROOT . '/views/inc/header.php';
 ?>
 
 <div class="container">
-    <div class="row mt-3">
-        <div class="col-md-4">
-            <h4>ICT Regels</h4>
-            <hr>
+  <div class="row mt-3">
+    <div class="col-md-4">
+      <h4>ICT Regels</h4>
+      <hr>
+    </div>
+  </div>
+  <div class="container">
+    <div class="accordion" id="Ictaccordion">
+    <?php foreach ($data['regels'] as $ictRegel) : ?>
+      <div class="card mt-3">
+        <div class="card-header" id="heading<?= $ictRegel->id ?>">
+          <h5 class="mb-0">
+            <button class="btn btn-link text-primary font-weight-bold  " type="button" data-toggle="collapse" data-target="#collapse<?= $ictRegel->id ?>" aria-expanded="true"
+              aria-controls="collapse<?= $ictRegel->id ?>">
+              <?= $ictRegel->naam ?>
+              <span><i class="fas fa-chevron-down"></i></span>
+            </button>
+          </h5>
         </div>
-    </div>
-<div class="container">
-<div class="accordion" id="accordionExample">
-  <div class="card">
-    <div class="card-header" id="headingOne">
-      <h5 class="mb-0">
-        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-         Regel #1
-        </button>
-      </h5>
-    </div>
 
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        <div id="collapse<?= $ictRegel->id ?>" class="collapse " aria-labelledby="heading<?= $ictRegel->id ?>" data-parent="#Ictaccordion">
+          <div class="card-body">
+            <?= $ictRegel->beschrijving ?>
+          </div>
+        </div>
       </div>
+<?php endforeach; ?>
     </div>
   </div>
-  <div class="card">
-    <div class="card-header" id="headingTwo">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-         Regel #2
-        </button>
-      </h5>
-    </div>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingThree">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Regel #3
-        </button>
-      </h5>
-    </div>
-    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-</div>
-</div>
 
 
-<?php
-require APPROOT . '/views/inc/footer.php';
-?>
+  <?php
+  require APPROOT . '/views/inc/footer.php';
+  ?>

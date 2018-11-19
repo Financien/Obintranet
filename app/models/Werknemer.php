@@ -10,16 +10,29 @@ class Werknemer extends Model
 
     public function getAllWerknemers()
     {
-        $directoraten = Werknemer::all();
+        $werknemers = Werknemer::all();
 
-        return $directoraten;
+        return $werknemers;
     }
 
     public function getWerknemersByDirectoraatId($id)
     {
         $werknemers = Werknemer::where('directoraat', $id)
             ->get();
-
         return $werknemers;
     }
+
+    public function getAllgepensioeneerden()
+    {
+        $gepensioeneerden = Werknemer::where('gepensioneerd', 1)
+            ->get();
+        return $gepensioeneerden;
+    }
+    public function getAllJubilarissen()
+    {
+        $jubilarissen = Werknemer::where('gepensioneerd', 0)
+            ->get();
+        return $jubilarissen;
+    }
+
 }

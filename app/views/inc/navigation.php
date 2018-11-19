@@ -27,7 +27,7 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="<?= URLROOT ?>personeelzaken/personeelswet">Personeelswet</a>
-                <a class="dropdown-item" href="<?= URLROOT ?>personeelzaken/studie">Studie</a>
+                <a class="dropdown-item" href="<?= URLROOT ?>personeelzaken/document/5">Studie</a>
                 <a class="dropdown-item" href="<?= URLROOT ?>personeelzaken/algemeneregels">Algemene Regels</a>
             </li>
             <li class="nav-item dropdown">
@@ -37,8 +37,8 @@
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="<?= URLROOT ?>activiteiten/huba">HUBA</a>
                 <a class="dropdown-item" href="<?= URLROOT ?>activiteiten/evenementen">Evenementen</a>
-                <a class="dropdown-item" href="<?= URLROOT ?>activiteiten/jubilarisen"">Jubilarisen</a>
-                <a class="dropdown-item" href="#">Gepensioneerden</a>
+                <a class="dropdown-item" href="<?= URLROOT ?>activiteiten/jubilarisen">Jubilarisen</a>
+                <a class="dropdown-item" href="<?= URLROOT ?>activiteiten/gepensioneerden">Gepensioneerden</a>
                 <a class="dropdown-item" href="#">Mijlpalen</a>
             </li>
             <li class="nav-item dropdown">
@@ -49,10 +49,13 @@
                 <a class="dropdown-item" href="<?= URLROOT ?>ICT/ictregels">ICT Regels</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="<?= URLROOT ?>personeelbond">Personeelsbond</a>
+              <a class="nav-link " href="<?= URLROOT ?>pages/wetten">Wetten</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="#">Vacatures</a>
+              <a class="nav-link " href="<?= URLROOT ?>pages/personeelbond">Personeelsbond</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="<?= URLROOT ?>pages/vacatures">Vacatures</a>
             </li>
           </ul>
         </div>
