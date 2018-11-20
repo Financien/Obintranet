@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-            <a class="nav-link" href="<?= URLROOT; ?>"><i class="fas fa-home"></i> Home</a>
+            <a class="nav-link" href="<?= URLROOT; ?>"><i class="fas fa-home text-primary"></i> Home</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
