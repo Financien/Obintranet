@@ -1,39 +1,41 @@
 </main>
 <footer class="footer mt-3 bg-dark text-white">
       <div class="container">
+      <div class="row ">
+        <div class="col mt-2">
+            <h3><span class="font-weight-light">Intranet |</span>  <span class="font-weight-bold">Financi&euml;n</span></h3>
+        </div>
+      </div>
        <div class="row">
        <div class="col-md-4">
-            <h5 class="mt-2">Over Intranet</h5>
-            <hr>
+            <hr class="bg-primary">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia dolor repudiandae odit cupiditate molestiae. Ex, itaque. Quo, illum. Quisquam, earum.</p>
         </div>
         <div class="col-md-4">
-            <h5 class="mt-2">Quick Links</h5>
-            <hr>
+            <hr class="bg-primary">
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Active</a>
+                <a class="nav-link  text-white" href="<?= URLROOT ?>personeelzaken/algemeneregels"><i class="fas fa-genderless text-primary"></i> Algemene Regels</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                <a class="nav-link text-white" href="<?= URLROOT ?>personeelzaken/personeelswet"><i class="fas fa-genderless text-primary"></i> Personeelswet</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                <a class="nav-link  text-white" href="<?= URLROOT ?>pages/personeelbond"><i class="fas fa-genderless text-primary"></i> Personeelsbond</a>
                 </li>
             </ul>
         </div>
         <div class="col-md-4">
-            <h5 class="mt-2">Quick Links</h5>
-            <hr>
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Active</a>
+            <hr class="bg-primary">
+            <ul class="nav flex-column ">
+                <li class="nav-item ">
+                    <a class="nav-link text-white" href="#"><i class="fas fa-genderless text-primary"></i> About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link text-white" href="#"><i class="fas fa-genderless text-primary"></i> Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link  text-white" href="<?= URLROOT ?>pages/vacatures"><i class="fas fa-genderless text-primary"></i> Vacatures</a>
                 </li>
 
             </ul>

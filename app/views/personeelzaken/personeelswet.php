@@ -18,7 +18,7 @@ require APPROOT . '/views/inc/header.php';
         </div>
         </div> -->
 
-<div class="container">
+<div class="container mt-3">
     <div class="row">
         <div class="col-md-4">
             <h4>Personeelswet</h4>

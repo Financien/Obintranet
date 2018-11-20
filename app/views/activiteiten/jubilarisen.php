@@ -14,7 +14,7 @@ require APPROOT . '/views/inc/header.php';
         <table id="myTable" class="table table-responsive   " >
         <thead>
             <tr>
-                <th>Department</th>
+                <th>Dienstjaren</th>
                 <th>Dienstonderdeel</th>
                 <th>Achternaam</th>
                 <th>Voornaam</th>

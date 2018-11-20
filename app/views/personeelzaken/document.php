@@ -3,7 +3,7 @@ require APPROOT . '/views/inc/header.php';
 ?>
 
 
-<div class="container">
+<div class="container mt-3">
     <div class="row">
         <div class="col-md-4">
             <h4><?= $data['document']->naam ?></h4>
