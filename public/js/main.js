@@ -13,12 +13,6 @@ $(function () {
     locale: "nl",
     height: 1650
   });
-  $('.jubilarrisen').slick({
-    infinite: true,
-    dots: true,
-    slidesToShow: 3,
-    slidesToScroll: 3
-  });
 
   $('.table').DataTable({
     "language": {

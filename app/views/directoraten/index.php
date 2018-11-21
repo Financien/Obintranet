@@ -31,25 +31,26 @@ require APPROOT . '/views/inc/header.php';
         <table id="myTable" class="table table-responsive   " >
         <thead>
             <tr>
-                <th>Department</th>
-                <th>Dienstonderdeel</th>
-                <th>Achternaam</th>
+                <th>Naam</th>
                 <th>Voornaam</th>
-                <th>Gender</th>
-                <th>Functieomschrijving</th>
+                <th>Geboorte-datum</th>
+                <th>Geslacht</th>
+                <th>Afdeling</th>
+                <th>Functie</th>
                 <th>Email</th>
             </tr>
             </thead>
             <tbody>
             <?php foreach ($data['werknemers'] as $werknemer) : ?>
                 <tr>
-                    <td><?php echo date('Y') - date('Y', strtotime($werknemer->dienstjaar)) ?></td>
-                    <td><?php echo $werknemer->functie ?></td>
+
                     <td><?php echo $werknemer->naam ?></td>
                     <td><?php echo $werknemer->voornaam ?></td>
-                    <td><?php echo $werknemer->gender_id ?></td>
+                    <td><?php echo $werknemer->leeftijd ?></td>
+                    <td><?php echo $werknemer->gender ?></td>
+                    <td><?php echo $werknemer->naam_afdeling ?></td>
                     <td><?php echo $werknemer->functie ?></td>
-                    <td><?php echo $werknemer->email ?></td>
+                    <td><a href="mailto:<?php echo $werknemer->email ?>"><?php echo $werknemer->email ?></a></td>
 
                 </tr>
                 <?php endforeach; ?>

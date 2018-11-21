@@ -12,7 +12,6 @@ class Directoraten extends Controller
     {
         $directoraat = $this->directoraatModel->getDirectoraatById($id);
         $werknemers = $this->werknemerModel->getWerknemersByDirectoraatId($id);
-
         $data = [
             'directoraat' => $directoraat,
             'werknemers' => $werknemers

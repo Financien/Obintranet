@@ -17,7 +17,19 @@ class Werknemer extends Model
 
     public function getWerknemersByDirectoraatId($id)
     {
-        $werknemers = Werknemer::where('directoraat', $id)
+        $werknemers = Werknemer::join('ob_afdelingen', 'ob_werknemers.afdeling_id', '=', 'ob_afdelingen.id')
+            ->join('ob_gender', 'ob_werknemers.gender_id', '=', 'ob_gender.id')
+            ->select(
+                'ob_werknemers.naam',
+                'ob_werknemers.voornaam',
+                'ob_werknemers.leeftijd',
+                'ob_werknemers.telefoon',
+                'ob_werknemers.email',
+                'ob_werknemers.functie',
+                'ob_afdelingen.naam_afdeling',
+                'ob_gender.gender'
+            )
+            ->where('ob_werknemers.directoraat_id', $id)
             ->get();
         return $werknemers;
     }
