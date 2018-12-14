@@ -21,7 +21,7 @@ require APPROOT . '/views/inc/header.php';
                         <h6 class="card-title">
                             <?= $vacature->naam; ?>
                         </h6>
-                        <a href=" <?= URLROOT . 'public/assets/documents/' . $vacature->path ?>" class="card-link btn btn-outline-danger"><i class="fas fa-download"></i> Download</a>
+                        <a href=" <?= URLROOT . 'public/assets/documents/' . $vacature->path ?>" class="card-link btn btn-outline-danger" target="_blank"><i class="fas fa-download"></i> Download</a>
                     </div>
                 </div>
             </div>

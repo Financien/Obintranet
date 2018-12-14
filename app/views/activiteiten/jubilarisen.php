@@ -31,7 +31,7 @@ require APPROOT . '/views/inc/header.php';
                     <td><?php echo $werknemer->functie ?></td>
                     <td><?php echo $werknemer->naam ?></td>
                     <td><?php echo $werknemer->voornaam ?></td>
-                    <td><?php echo $werknemer->gender_id ?></td>
+                    <td><?php echo $werknemer->gender ?></td>
                     <td><?php echo $werknemer->functie ?></td>
                     <td><?php echo $werknemer->email ?></td>
 

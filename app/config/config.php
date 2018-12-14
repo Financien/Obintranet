@@ -1,8 +1,8 @@
 <?php
 //DB Params
 define("DB_HOST", "localhost");
-define("DB_USER", "root");
-define("DB_PASS", "");
+define("DB_USER", "gerrit");
+define("DB_PASS", "start!123");
 define("DB_NAME", "obintranet");
 define("DB_DRIVER", "mysql");
 
@@ -12,8 +12,8 @@ define("DB_DRIVER", "mysql");
 define("APPROOT", dirname(dirname(__FILE__)));
 
 //URL ROOT
-define("URLROOT", 'http://localhost/intranet/');
+define("URLROOT", 'http://localhost/home/');
 
 
 //SITE NAME
-define('SITENAME', 'Intranet');
+define('SITENAME', 'Intranet Ministerie van Financien');

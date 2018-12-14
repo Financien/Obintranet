@@ -23,7 +23,7 @@ class Activiteiten extends Controller
     public function jubilarisen()
     {
         $jubilarissen = $this->werknemerModel->getAllJubilarissen();
-        $jubilarisArray = [5, 10, 15, 20, 25, 30, 35, 40, 45];
+        $jubilarisArray = [20, 25, 30, 35, 40, 45];
 
         foreach ($jubilarissen as $jubilaris) {
             $aantalDienstJaren = date('Y') - date('Y', strtotime($jubilaris->dienstjaar));

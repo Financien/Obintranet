@@ -14,7 +14,7 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Directoraat
+                Directoraten
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="<?= URLROOT ?>directoraten/directoraat/2">Directoraat Belastingen</a>
@@ -27,7 +27,7 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="<?= URLROOT ?>personeelzaken/personeelswet">Personeelswet</a>
-                <a class="dropdown-item" href="<?= URLROOT ?>personeelzaken/document/5">Studie</a>
+                <a class="dropdown-item" href="<?= URLROOT ?>personeelzaken/document/5">Verlofaanvragen</a>
                 <a class="dropdown-item" href="<?= URLROOT ?>personeelzaken/algemeneregels">Algemene Regels</a>
             </li>
             <li class="nav-item dropdown">
@@ -35,11 +35,11 @@
                 Activiteiten
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="<?= URLROOT ?>activiteiten/huba">HUBA</a>
+                <!-- <a class="dropdown-item" href="<?= URLROOT ?>activiteiten/huba">HUBA</a> -->
                 <a class="dropdown-item" href="<?= URLROOT ?>activiteiten/evenementen">Evenementen</a>
                 <a class="dropdown-item" href="<?= URLROOT ?>activiteiten/jubilarisen">Jubilarisen</a>
                 <a class="dropdown-item" href="<?= URLROOT ?>activiteiten/gepensioneerden">Gepensioneerden</a>
-                <a class="dropdown-item" href="#">Mijlpalen</a>
+                <!-- <a class="dropdown-item" href="#">Mijlpalen</a> -->
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -52,7 +52,7 @@
               <a class="nav-link " href="<?= URLROOT ?>pages/wetten">Wetten</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="<?= URLROOT ?>pages/personeelbond">Personeelsbond</a>
+              <a class="nav-link " href="<?= URLROOT ?>pages/personeelbond">Personeelsbonden</a>
             </li>
             <li class="nav-item">
               <a class="nav-link " href="<?= URLROOT ?>pages/vacatures">Vacatures</a>

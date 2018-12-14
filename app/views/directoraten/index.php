@@ -4,7 +4,7 @@ require APPROOT . '/views/inc/header.php';
 <div class="container mt-3">
     <div class="row">
         <div class="col-md-3">
-            <img class="img img-fluid rounded-circle" src="https://via.placeholder.com/300" alt="">
+            <img class="img img-fluid rounded-circle" src="<?= APPROOT .  $data['directoraat'] -> foto; ?> " alt="" height="300" width="300">
         </div>
         <div class="col-md-9">
             <div class="ml-5">
@@ -15,7 +15,9 @@ require APPROOT . '/views/inc/header.php';
                 <span><i class="fas fa-map-marker-alt"></i> Adres. : <?= $data['directoraat']->adress; ?></span>
                 <br>
                 <span><i class="fas fa-phone"></i> Telefoonnr. : <?= $data['directoraat']->telefoon; ?></span>
-
+                <br>
+                <span><i class="fa fa-envelope"></i> Email. : <?= $data['directoraat']->email;?><span>
+                <br>
 
             </div>
             </div>
@@ -33,7 +35,6 @@ require APPROOT . '/views/inc/header.php';
             <tr>
                 <th>Naam</th>
                 <th>Voornaam</th>
-                <th>Geboorte-datum</th>
                 <th>Geslacht</th>
                 <th>Afdeling</th>
                 <th>Functie</th>
@@ -46,7 +47,6 @@ require APPROOT . '/views/inc/header.php';
 
                     <td><?php echo $werknemer->naam ?></td>
                     <td><?php echo $werknemer->voornaam ?></td>
-                    <td><?php echo $werknemer->leeftijd ?></td>
                     <td><?php echo $werknemer->gender ?></td>
                     <td><?php echo $werknemer->naam_afdeling ?></td>
                     <td><?php echo $werknemer->functie ?></td>

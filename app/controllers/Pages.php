@@ -13,10 +13,17 @@ class Pages extends Controller
         $this->view('pages/index');
     }
 
+   
     public function about()
     {
-        $data = ['title' => 'About us'];
-        $this->view('pages/about', $data);
+        
+        $this->view('pages/about');
+    }
+
+    public function contact()
+    {
+        
+        $this->view('pages/contact');
     }
 
     public function vacatures()

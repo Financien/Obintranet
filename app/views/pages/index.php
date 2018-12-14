@@ -1,20 +1,6 @@
-<?php
-require APPROOT . '/views/inc/header.php';
-?>
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="first-slide img-fluid" src="https://via.placeholder.com/1920x1080" alt="First slide">
-      <div class="container">
-        <div class="carousel-caption text-center">
-          <h1>Example headline.</h1>
-          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
-            metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-          <p>
-          <a class="btn btn-lg btn-outline-primary" href="#" role="button">Sign up today</a></p>
-        </div>
-      </div>
-    </div>
+<?php require APPROOT . '/views/inc/header.php'; ?>
+
+<?php require APPROOT . '/views/pages/slider.php'; ?>
 
 
   </div>
@@ -43,10 +29,9 @@ require APPROOT . '/views/inc/header.php';
               <i class="far fa-newspaper fa-stack-1x fa-inverse"></i>
             </span>
             <hr>
-            <h5 class="card-title mt-2">Mijlpalen</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="btn btn-outline-primary btn-block">Go somewhere</a>
+            <h5 class="card-title mt-2">Vacatures</h5>
+            <p class="card-text">Sollicteren voor een nieuwe functie? bekijk onze vacatures</p>
+            <a href="<?= URLROOT ?>pages/vacatures" class="btn btn-outline-primary btn-block">Go here</a>
           </div>
         </div>
       </div>
@@ -59,10 +44,9 @@ require APPROOT . '/views/inc/header.php';
               <i class="far fa-handshake fa-stack-1x fa-inverse"></i>
             </span>
             <hr>
-            <h5 class="card-title mt-2">Personeelbond</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="btn btn-outline-primary btn-block">Go somewhere</a>
+            <h5 class="card-title mt-2">Personeelsbonden</h5>
+            <p class="card-text">Het Ministerie van Financiën telt 2 personeelsbonden. Lees hier meer over de samenstellingen van onze personeelsbonden.</p>
+            <a href="<?= URLROOT ?>pages/personeelbond" class="btn btn-outline-primary btn-block">Go here</a>
           </div>
         </div>
       </div>
@@ -75,9 +59,8 @@ require APPROOT . '/views/inc/header.php';
             </span>
             <hr>
             <h5 class="card-title mt-2">Evenemementen</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="btn btn-outline-primary btn-block">Go somewhere</a>
+            <p class="card-text">Klik hier voor de komende activiteiten</p>
+            <a href="<?= URLROOT ?>activiteiten/evenementen" class="btn btn-outline-primary btn-block">Go here</a>
           </div>
         </div>
       </div>
@@ -90,9 +73,8 @@ require APPROOT . '/views/inc/header.php';
             </span>
             <hr>
             <h5 class="card-title mt-2">Wetten</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="btn btn-outline-primary btn-block">Go somewhere</a>
+            <p class="card-text"> Heb hier toegang tot enkele digitale wetten </p>
+            <a href="<?= URLROOT ?>pages/wetten" class="btn btn-outline-primary btn-block">Go here</a>
           </div>
         </div>
       </div>
@@ -100,14 +82,11 @@ require APPROOT . '/views/inc/header.php';
   </section>
   <section class="mt-3">
 
-    <h3>Opkomende Evenemementen</h3>
+    <h3></h3>
     <hr>
     <div class="row">
       <div class="col-md-7">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem natus ipsam vero explicabo ducimus impedit
-          illo corporis quia culpa voluptates dolorem, facilis temporibus excepturi possimus esse obcaecati delectus
-          dicta iste officia necessitatibus nesciunt recusandae quisquam nostrum at! Sed nobis, libero facilis eum
-          alias magnam iste dignissimos distinctio at dolores inventore.</p>
+      <img src = "img/image_carousel.jpeg" height = "400" width = "600">
       </div>
       <div class="col-md-5">
         <div id='homeCalendar'></div>

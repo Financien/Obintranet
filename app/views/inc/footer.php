@@ -9,7 +9,7 @@
        <div class="row">
        <div class="col-md-4">
             <hr class="bg-primary">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia dolor repudiandae odit cupiditate molestiae. Ex, itaque. Quo, illum. Quisquam, earum.</p>
+            <p>Intranet een besloten online platform speciaal voor personen die verbonden zijn aan het Ministerie van Financiën. Via dit platform wensen wij u, als deel van het Ministerie, intern te informeren over nieuwsjes, activiteiten en tal van andere zaken.</p>
         </div>
         <div class="col-md-4">
             <hr class="bg-primary">
@@ -21,7 +21,7 @@
                 <a class="nav-link text-white" href="<?= URLROOT ?>personeelzaken/personeelswet"><i class="fas fa-genderless text-primary"></i> Personeelswet</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link  text-white" href="<?= URLROOT ?>pages/personeelbond"><i class="fas fa-genderless text-primary"></i> Personeelsbond</a>
+                <a class="nav-link  text-white" href="<?= URLROOT ?>pages/personeelbond"><i class="fas fa-genderless text-primary"></i> Personeelsbonden</a>
                 </li>
             </ul>
         </div>
@@ -29,10 +29,10 @@
             <hr class="bg-primary">
             <ul class="nav flex-column ">
                 <li class="nav-item ">
-                    <a class="nav-link text-white" href="#"><i class="fas fa-genderless text-primary"></i> About</a>
+                <a class="nav-link text-white" href="<?= URLROOT ?>pages/about"><i class="fas fa-genderless text-primary"></i> About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#"><i class="fas fa-genderless text-primary"></i> Contact</a>
+                    <a class="nav-link text-white" href="<?= URLROOT ?>pages/contact"><i class="fas fa-genderless text-primary"></i> Contact</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link  text-white" href="<?= URLROOT ?>pages/vacatures"><i class="fas fa-genderless text-primary"></i> Vacatures</a>

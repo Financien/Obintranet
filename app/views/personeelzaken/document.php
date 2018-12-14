@@ -7,13 +7,14 @@ require APPROOT . '/views/inc/header.php';
     <div class="row">
         <div class="col-md-4">
             <h4><?= $data['document']->naam ?></h4>
+            
             <hr>
         </div>
     </div>
 
      <div class="row">
        <div class="col">
-       <img src="https://picsum.photos/400/600/?blur" class="rounded" alt="...">
+       <img src = "img/Verlofimg.jpg" height = "300" width = "300">
         </div>
 
          <div class="col">
@@ -23,7 +24,7 @@ require APPROOT . '/views/inc/header.php';
                 <p><?= $data['document']->beschrijving ?></p>
             </div>
             <div class="row">
-            <a href="<?= URLROOT . 'public/assets/documents/' . $data['document']->path ?>" class="btn btn-danger btn-block" role="button"><i class="far fa-file-pdf"></i> Download</a>
+            <a href="<?= URLROOT . 'public/assets/documents/' . $data['document']->path ?>" class="btn btn-danger btn-block" role="button" target="_blank"><i class="far fa-file-pdf"></i> Download</a>
             </div>
         </div>
        </div>

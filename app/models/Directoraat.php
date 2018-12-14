@@ -6,7 +6,7 @@ use \Illuminate\Database\Eloquent\Model;
 class Directoraat extends Model
 {
     protected $table = 'ob_directoraten';
-    protected $fillable = ['directoraat', 'adress', 'type', 'beschrijving', 'foto'];
+    protected $fillable = ['directoraat', 'adress', 'type', 'beschrijving', 'foto', 'email'];
 
     public function getAllDirectoraten()
     {

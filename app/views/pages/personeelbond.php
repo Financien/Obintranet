@@ -1,7 +1,7 @@
 <?php
 require APPROOT . '/views/inc/header.php';
 ?>
-<img src="https://via.placeholder.com/1920x1080" class="img-fluid" alt="">
+<!-- <img src="https://via.placeholder.com/1920x1080" class="img-fluid" alt=""> -->
 <div class="container">
 
     <section class="mt-3">

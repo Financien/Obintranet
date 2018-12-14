@@ -5,7 +5,7 @@ require APPROOT . '/views/inc/header.php';
 <div class="container">
   <div class="row mt-3">
     <div class="col-md-4">
-      <h4>Algemene Regels</h4>
+    <h4>Dienstvoorschriften personeel Ministerie van Financiën</h4>
       <hr>
     </div>
   </div>
