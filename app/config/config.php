@@ -1,8 +1,8 @@
 <?php
 //DB Params
 define("DB_HOST", "localhost");
-define("DB_USER", "gerrit");
-define("DB_PASS", "start!123");
+define("DB_USER", "root");
+define("DB_PASS", "");
 define("DB_NAME", "obintranet");
 define("DB_DRIVER", "mysql");
 

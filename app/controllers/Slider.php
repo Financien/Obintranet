@@ -13,11 +13,11 @@ public function __contruct()
 
     public function sliders()
     {
-        $sliders = $this->slidersModel->getAllSliders();
+        $sliders = $this->SlidersModel->getAllSliders();
         $data = [
             'sliders' => $sliders,
         ];
-        $this->view('slider/slider_content', $data);
+        $this->view('pages/slider', $data);
     }         
 
 }
