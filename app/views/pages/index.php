@@ -1,9 +1,7 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
-
 <?php require APPROOT . '/views/pages/slider.php'; ?>
 
-
-  </div>
+  <!-- </div>
   <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Vorige</span>
@@ -12,7 +10,7 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Volgende</span>
   </a>
-</div>
+</div> -->
 
 <div class="container mt-3">
   <section>

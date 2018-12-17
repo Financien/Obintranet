@@ -1,0 +1,13 @@
+To fix this issue add following lines After Return and Before Begin statement:
+
+READS SQL DATA
+DETERMINISTIC
+
+For Example :
+
+CREATE FUNCTION f2()
+RETURNS CHAR(36) CHARACTER SET utf8
+/*ADD HERE */
+READS SQL DATA
+DETERMINISTIC
+BEGIN

@@ -1,14 +1,13 @@
 <?php
 use \Illuminate\Database\Eloquent\Model;
 
-class Sliders extends models{
+class Sliders extends Model {
     protected $table = 'ob_post';
     protected $fillable = ['post_name', 'post_content', 'post_categorie','post_img'];
 
     public function getAllSliders() 
     {
-        $sliders = Sliders :: All();
-        return $sliders;
+        return Sliders::all();
     }
 
 }

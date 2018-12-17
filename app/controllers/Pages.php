@@ -4,13 +4,17 @@ class Pages extends Controller
     public function __construct()
     {
         $this->DocumentModel = $this->model('Document');
+        $this->SliderModel = $this->model('Sliders');
     }
 
 
     public function index()
     {
-
-        $this->view('pages/index');
+        $sliders = $this->SliderModel->getAllSliders();
+        $data = [
+            'sliders' => $sliders
+        ];
+        $this->view('pages/index', $data);
     }
 
    
