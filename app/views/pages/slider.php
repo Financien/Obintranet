@@ -1,5 +1,3 @@
-
-<<<<<<< HEAD
 <?php 
 if(count($data['sliders'])) {
 ?>
