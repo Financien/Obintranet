@@ -4,7 +4,7 @@ class Slider extends Controller
 {
 public function __contruct()
 {
-    $data = $this->SlidersModel->getAllSliders();
+    $this->SlidersModel->getAllSliders();
 
 }
     public function index()
