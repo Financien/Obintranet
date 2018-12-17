@@ -13,3 +13,8 @@
 .carousel-control-next {
     color: black;
 }
+
+.post_img {
+    width: 65%;
+    height: auto;
+}

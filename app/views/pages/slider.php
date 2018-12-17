@@ -1,14 +1,15 @@
 <?php 
-if(count($data['sliders'])) {
+if(count($data['posts']) > 0) {
 ?>
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
-    <?php foreach ($data['sliders'] as $key => $slider) : ?>
+    <?php foreach ($data['posts'] as $key => $post) : ?>
     <?php echo ($key == 0 ? '<div class="carousel-item active">' : '<div class="carousel-item">'); ?>
-      <img class="d-block w-100 sliderImg" src="<?php echo $slider->post_img; ?>" alt="First slide">
+      <img class="d-block w-100 postImg" src="<?php echo URLROOT . $post->post_img; ?>" alt="First slide">
       <div class="carousel-caption d-none d-md-block">
-        <h1><?php echo $slider->post_name; ?></h1>
-        <p><?php echo $slider->post_content; ?></p>
+        <!-- <h1><?php echo $post->post_name; ?></h1> -->
+        <!-- <p><?php echo $post->post_content; ?></p> -->
+        <a href="pages/post/<?php echo $post->id; ?>" class="btn btn-lg btn-secondary">Lees meer...</a>
       </div>
     </div>
     <?php endforeach; ?>    

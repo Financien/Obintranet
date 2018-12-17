@@ -84,7 +84,7 @@
     <hr>
     <div class="row">
       <div class="col-md-7">
-      <img src = "img/image_carousel.jpeg" height = "400" width = "600">
+      <img src = "<?= URLROOT ?>img/image_carousel.jpeg" height = "400" width = "600">
       </div>
       <div class="col-md-5">
         <div id='homeCalendar'></div>

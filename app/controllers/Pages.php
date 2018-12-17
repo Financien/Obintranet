@@ -4,15 +4,15 @@ class Pages extends Controller
     public function __construct()
     {
         $this->DocumentModel = $this->model('Document');
-        $this->SliderModel = $this->model('Sliders');
+        $this->PostModel = $this->model('Post');
     }
 
 
     public function index()
     {
-        $sliders = $this->SliderModel->getAllSliders();
+        $posts = $this->PostModel->getAllPosts();
         $data = [
-            'sliders' => $sliders
+            'posts' => $posts
         ];
         $this->view('pages/index', $data);
     }
@@ -52,5 +52,16 @@ class Pages extends Controller
             'wetten' => $wetten
         ];
         $this->view('pages/wetten', $data);
+    }
+
+    public function post($id = null) {
+        if(empty($id)) header('Location: '.URLROOT);
+        $post = $this->PostModel->getPostById($id);
+        
+        $data = [
+            'post' => $post
+        ];
+        if(@count($data['post']) != 1) header('Location: '.URLROOT);
+        $this->view('pages/post', $data['post']);
     }
 }
