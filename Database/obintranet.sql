@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.15.10
--- https://www.phpmyadmin.net
+-- version 4.8.3
+-- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 14, 2018 at 12:41 AM
--- Server version: 5.5.60-MariaDB
--- PHP Version: 7.2.13
+-- Generation Time: Dec 18, 2018 at 03:17 PM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.2.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -24,8 +26,7 @@ DELIMITER $$
 --
 -- Functions
 --
-CREATE DEFINER=`root`@`localhost` FUNCTION `initcap`(`x` CHAR(30)) RETURNS char(30) CHARSET utf8
-BEGIN
+CREATE DEFINER=`root`@`localhost` FUNCTION `initcap` (`x` CHAR(30)) RETURNS CHAR(30) CHARSET utf8 BEGIN
 SET @str='';
 SET @l_str='';
 WHILE x REGEXP ' ' DO
@@ -44,7 +45,7 @@ DELIMITER ;
 -- Table structure for table `ob_admin`
 --
 
-CREATE TABLE IF NOT EXISTS `ob_admin` (
+CREATE TABLE `ob_admin` (
   `id` int(11) NOT NULL,
   `naam` varchar(100) NOT NULL,
   `achternaam` varchar(100) NOT NULL,
@@ -52,7 +53,7 @@ CREATE TABLE IF NOT EXISTS `ob_admin` (
   `password` text NOT NULL,
   `level` int(11) NOT NULL DEFAULT '1',
   `last_login` datetime DEFAULT NULL COMMENT 'laatste session'
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ob_admin`
@@ -67,7 +68,7 @@ INSERT INTO `ob_admin` (`id`, `naam`, `achternaam`, `username`, `password`, `lev
 -- Table structure for table `ob_adres`
 --
 
-CREATE TABLE IF NOT EXISTS `ob_adres` (
+CREATE TABLE `ob_adres` (
   `adres_id` int(11) NOT NULL,
   `adres` varchar(100) NOT NULL,
   `district_id` int(11) DEFAULT NULL,
@@ -4722,7 +4723,7 @@ INSERT INTO `ob_adres` (`adres_id`, `adres`, `district_id`, `ressort`) VALUES
 (2178, 'Shayanaweg', 11, 'Koewarasan'),
 (2179, 'Ramdew Sawitraweg', 11, 'Koewarasan'),
 (2185, 'Santoerweg', 11, 'De Nieuwe Grond'),
-(2191, '\\"ma Lefi\\" L.leeflang-meheizw', 11, 'De Nieuwe Grond'),
+(2191, '\\\"ma Lefi\\\" L.leeflang-meheizw', 11, 'De Nieuwe Grond'),
 (2194, 'Harold Chitanieweg', 11, 'De Nieuwe Grond'),
 (2195, 'Mosstraat', 11, 'Kwatta'),
 (2199, 'Wanishaweg', 11, 'Houttuin'),
@@ -4746,7 +4747,7 @@ INSERT INTO `ob_adres` (`adres_id`, `adres`, `district_id`, `ressort`) VALUES
 (2260, 'Balsalaan', 11, 'Houttuin'),
 (2265, 'Bedohoutweg', 11, 'Houttuin'),
 (2274, 'Ivoorpalmstraat', 11, 'Kwatta'),
-(2278, '\\"tito\\" Harvey Rodriquezweg', 11, 'De Nieuwe Grond'),
+(2278, '\\\"tito\\\" Harvey Rodriquezweg', 11, 'De Nieuwe Grond'),
 (2283, 'Lucien Blaakerweg', 11, 'De Nieuwe Grond'),
 (2291, 'Ramesh Chanderbhanweg', 11, 'Saramacca Polder'),
 (2292, 'Ozir-chanweg', 11, 'De Nieuwe Grond'),
@@ -5381,7 +5382,7 @@ INSERT INTO `ob_adres` (`adres_id`, `adres`, `district_id`, `ressort`) VALUES
 -- Table structure for table `ob_afdelingen`
 --
 
-CREATE TABLE IF NOT EXISTS `ob_afdelingen` (
+CREATE TABLE `ob_afdelingen` (
   `id` int(11) NOT NULL,
   `naam_afdeling` varchar(100) NOT NULL,
   `directoraat_id` int(11) NOT NULL
@@ -5424,13 +5425,13 @@ INSERT INTO `ob_afdelingen` (`id`, `naam_afdeling`, `directoraat_id`) VALUES
 -- Table structure for table `ob_cao`
 --
 
-CREATE TABLE IF NOT EXISTS `ob_cao` (
+CREATE TABLE `ob_cao` (
   `id` int(11) NOT NULL,
   `naam` varchar(100) NOT NULL,
   `beschrijving` text NOT NULL,
   `status` int(11) NOT NULL COMMENT '0: Inactive, 1: Active',
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ob_cao`
@@ -5451,7 +5452,7 @@ INSERT INTO `ob_cao` (`id`, `naam`, `beschrijving`, `status`, `timestamp`) VALUE
 -- Table structure for table `ob_directoraten`
 --
 
-CREATE TABLE IF NOT EXISTS `ob_directoraten` (
+CREATE TABLE `ob_directoraten` (
   `id` int(11) NOT NULL,
   `directoraat` varchar(100) NOT NULL,
   `adress` varchar(100) DEFAULT NULL,
@@ -5469,9 +5470,9 @@ CREATE TABLE IF NOT EXISTS `ob_directoraten` (
 
 INSERT INTO `ob_directoraten` (`id`, `directoraat`, `adress`, `telefoon`, `beschrijving`, `foto`, `email`, `misie`, `visie`) VALUES
 (1, 'Directoraat CLAD', '4', '123456', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus nisi dolore rerum cupiditate ullam quaerat aperiam nihil illo ratione corporis? Assumenda alias laudantium est suscipit maxime? Aperiam accusantium corrupti ad, est sapiente nobis doloremque recusandae eveniet nulla laboriosam assumenda sequi reprehenderit magnam veniam dolore eius ut quaerat officia laudantium dignissimos!', '', '', '', ''),
-(2, 'Directoraat Belastingen', 'Van Sommelsdijckstraat 27 ', '425340 / 476640', 'Om de overheid in staat te stellen haar voorgenomen beleid succesvol ten uitvoer te brengen, zijn er financiële middelen nodig. Deze financiële middelen moeten er ook voor zorgen dat de overheid een adequaat staatshuishouden in stand kan houden.\r\n\r\nEen van de belangrijkste manieren om aan financiële middelen te komen, is het heffen en innen van belastingen. In Suriname worden belastingen geheven op basis van richtlijnen in de wet.\r\n\r\n\r\n\r\nDe Belastingdienst is verantwoordelijk voor de uitvoering van de wet en heeft tot taak de belastingen te heffen en te innen zodat de belastinggelden in de staatskas terechtkomen. De belastingdienst voert ook de controle uit op de naleving van de wetten.\r\n', 'dir_placeholder.png', 'dirbel@finance.gov.sr', 'Missie Belastingdienst  Wij genereren staatsinkomsten door het effectief faciliteren van de klant bij het nakomen van de fiscale en overige relevante regelgeving, teneinde te komen tot duurzame ontwikkeling van onze samenleving.', 'Visie Belastingdienst  Om onze missie te realiseren willen wij, als dienstverlenende organisatie:  \r\n1.   Een flexibele innovatieve organisatie zijn die de hoogste mate van efficientie nastreeft, teneinde de kwaliteit van de dienstverlening voortdurend te verbeteren.  \r\n2.   De klantgerichtheid en de betrouwbaarheid bij de wetstoepassing stimuleren. \r\n3.   Een werkklimaat creeren waarbij adequate waardering, teamgeest. wederzijds respect en open communicatie de boventoon voeren. \r\n4.   De belastingplichtige inspireren tot nakoming van zijn fiscale verplichtingen.	'),
-(3, 'Directoraat Financien', 'Jacques Gompertstraat,           Paramaribo', '474184', 'Het Directoraat Financiën draagt zorg voor het algemeen beheer van alle staatsgelden en het toezicht op de juiste besteding daarvan. Hier wordt ook toezicht gehouden op de financiële belangen van de staat bij financiële en andere instellingen, waarin de staat een financieel belang heeft.\r\n\r\n\r\n\r\nDe vertegenwoordiging van de staat in alle gevallen waarin deze deelneemt in het aandelenkapitaal van financiële instellingen wordt ook door dit Directoraat bewaakt. Het toezicht op de staatsbanken, alsmede het volkskredietwezen en de pandhuizen, de heffing en inning van zegelrecht en andere wettelijk geheven rechten, het postwezen, de nationale loterijen zijn allemaal taken van het ministerie van Financiën. Alle aangelegenheden betreffende de staatsbegroting en het algemeen begrotingsbeleid, alsook de rekening en verantwoording van staatsgelden behoren ook tot de verantwoordelijkheid van het ministerie van Financiën.\r\n\r\nHet Directoraat Financiën draagt ook zorg voor het algemeen financieel en monetair beleid, het verzekeringswezen en de circulatie van munten en muntbiljetten. Ook de aangelegenheden van deviezen - politieke aard, het een en ander in samenwerking met het ministerie van Handel en Industrie en het toezicht op de naleving van het deviezenregiem inzake vergunningen voor invoer en uitvoer van goederen en diensten. Het aangaan van leningen, de uitgifte van schatkistbiljetten, promessen, de uitgiften van staatsgaranties alsmede de investering of herinvestering van staatsgelden zijn ook taken van dit Directoraat.', 'dir_placeholder.png', 'secdir@finance.gov.sr', '', ''),
-(4, 'Planning en Ontwikkelingsfinanciering', 'Henck Arronstraat 36', '471108', '', '', 'secdirof@finance.gov.sr', '', '');
+(2, 'Directoraat Belastingen', 'Van Sommelsdijckstraat 27 ', '425340 / 476640', 'Om de overheid in staat te stellen haar voorgenomen beleid succesvol ten uitvoer te brengen, zijn er financiële middelen nodig. Deze financiële middelen moeten er ook voor zorgen dat de overheid een adequaat staatshuishouden in stand kan houden.\r\n\r\nEen van de belangrijkste manieren om aan financiële middelen te komen, is het heffen en innen van belastingen. In Suriname worden belastingen geheven op basis van richtlijnen in de wet.\r\n\r\n\r\n\r\nDe Belastingdienst is verantwoordelijk voor de uitvoering van de wet en heeft tot taak de belastingen te heffen en te innen zodat de belastinggelden in de staatskas terechtkomen. De belastingdienst voert ook de controle uit op de naleving van de wetten.\r\n', 'dir_belasting.jpg', 'dirbel@finance.gov.sr', 'Missie Belastingdienst  Wij genereren staatsinkomsten door het effectief faciliteren van de klant bij het nakomen van de fiscale en overige relevante regelgeving, teneinde te komen tot duurzame ontwikkeling van onze samenleving.', 'Visie Belastingdienst  Om onze missie te realiseren willen wij, als dienstverlenende organisatie:  \r\n1.   Een flexibele innovatieve organisatie zijn die de hoogste mate van efficientie nastreeft, teneinde de kwaliteit van de dienstverlening voortdurend te verbeteren.  \r\n2.   De klantgerichtheid en de betrouwbaarheid bij de wetstoepassing stimuleren. \r\n3.   Een werkklimaat creeren waarbij adequate waardering, teamgeest. wederzijds respect en open communicatie de boventoon voeren. \r\n4.   De belastingplichtige inspireren tot nakoming van zijn fiscale verplichtingen.	'),
+(3, 'Directoraat Financien', 'Jacques Gompertstraat,           Paramaribo', '474184', 'Het Directoraat Financiën draagt zorg voor het algemeen beheer van alle staatsgelden en het toezicht op de juiste besteding daarvan. Hier wordt ook toezicht gehouden op de financiële belangen van de staat bij financiële en andere instellingen, waarin de staat een financieel belang heeft.\r\n\r\n\r\n\r\nDe vertegenwoordiging van de staat in alle gevallen waarin deze deelneemt in het aandelenkapitaal van financiële instellingen wordt ook door dit Directoraat bewaakt. Het toezicht op de staatsbanken, alsmede het volkskredietwezen en de pandhuizen, de heffing en inning van zegelrecht en andere wettelijk geheven rechten, het postwezen, de nationale loterijen zijn allemaal taken van het ministerie van Financiën. Alle aangelegenheden betreffende de staatsbegroting en het algemeen begrotingsbeleid, alsook de rekening en verantwoording van staatsgelden behoren ook tot de verantwoordelijkheid van het ministerie van Financiën.\r\n\r\nHet Directoraat Financiën draagt ook zorg voor het algemeen financieel en monetair beleid, het verzekeringswezen en de circulatie van munten en muntbiljetten. Ook de aangelegenheden van deviezen - politieke aard, het een en ander in samenwerking met het ministerie van Handel en Industrie en het toezicht op de naleving van het deviezenregiem inzake vergunningen voor invoer en uitvoer van goederen en diensten. Het aangaan van leningen, de uitgifte van schatkistbiljetten, promessen, de uitgiften van staatsgaranties alsmede de investering of herinvestering van staatsgelden zijn ook taken van dit Directoraat.', 'dir_financien.JPG', 'secdir@finance.gov.sr', '', ''),
+(4, 'Planning en Ontwikkelingsfinanciering', 'Henck Arronstraat 36', '471108', '', 'dir_plof.jpg', 'secdirof@finance.gov.sr', '', '');
 
 -- --------------------------------------------------------
 
@@ -5479,7 +5480,7 @@ INSERT INTO `ob_directoraten` (`id`, `directoraat`, `adress`, `telefoon`, `besch
 -- Table structure for table `ob_district`
 --
 
-CREATE TABLE IF NOT EXISTS `ob_district` (
+CREATE TABLE `ob_district` (
   `district_id` int(11) NOT NULL,
   `district_naam` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -5507,14 +5508,14 @@ INSERT INTO `ob_district` (`district_id`, `district_naam`) VALUES
 -- Table structure for table `ob_document`
 --
 
-CREATE TABLE IF NOT EXISTS `ob_document` (
+CREATE TABLE `ob_document` (
   `id` int(11) NOT NULL,
   `naam` varchar(100) NOT NULL,
   `beschrijving` text,
   `type` int(11) NOT NULL,
   `path` varchar(100) NOT NULL,
   `image` varchar(100) NOT NULL COMMENT 'foto'
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ob_document`
@@ -5534,11 +5535,11 @@ INSERT INTO `ob_document` (`id`, `naam`, `beschrijving`, `type`, `path`, `image`
 (16, 'Network Specialist All Levels', NULL, 7, 'Network Specialist All Levels.pdf', 'dir_placeholder.png'),
 (17, 'System Administrator Exchange', NULL, 7, 'System Administrator Exchange.pdf', 'dir_placeholder.png'),
 (18, 'System Administrator VMWARE', NULL, 7, 'System Administrator VMWARE', 'dir_placeholder.png'),
-(19, 'Wet Rij- en Voertuigenbelasting', '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."', 9, 'Wet Rij- en Voertuigenbelasting 2018.pdf', ''),
-(20, 'Wet_Ontslagvergunning', '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."', 9, 'Wet_Ontslagvergunning.pdf', ''),
-(23, 'Wet_AO_Bepaalde_Tijd', NULL, 9, 'Wet_AO_Bepaalde_Tijd.pdf', ''),
-(24, 'comptabiliteitswet', NULL, 9, 'comptabiliteitswet.pdf', ''),
-(25, 'Ontwerpwet_Instituut_Chartered_Accountant', NULL, 9, 'Ontwerpwet_Instituut_Chartered_Accountants.pdf', '');
+(19, 'Wet Rij- en Voertuigenbelasting', '\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"', 9, 'Wet Rij- en Voertuigenbelasting 2018.pdf', 'Rij_en_voertuigen_pictogram_intranet.jpg'),
+(20, 'Wet_Ontslagvergunning', '\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"', 9, 'Wet_Ontslagvergunning.pdf', 'Pictogram_contract_en_ontslag_intranet.png'),
+(23, 'Wet_AO_Bepaalde_Tijd', NULL, 9, 'Wet_AO_Bepaalde_Tijd.pdf', 'dir_placeholder.png'),
+(24, 'comptabiliteitswet', NULL, 9, 'comptabiliteitswet.pdf', 'Comptabiliteit_picogram.jpg'),
+(25, 'Ontwerpwet_Instituut_Chartered_Accountant', NULL, 9, 'Ontwerpwet_Instituut_Chartered_Accountants.pdf', 'accountancy_pictogram.png');
 
 -- --------------------------------------------------------
 
@@ -5546,13 +5547,13 @@ INSERT INTO `ob_document` (`id`, `naam`, `beschrijving`, `type`, `path`, `image`
 -- Table structure for table `ob_faq`
 --
 
-CREATE TABLE IF NOT EXISTS `ob_faq` (
+CREATE TABLE `ob_faq` (
   `id` int(11) NOT NULL,
   `vraag` varchar(100) NOT NULL,
   `antwoord` text NOT NULL,
   `status` int(11) NOT NULL COMMENT '0: Inactive, 1: Active',
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ob_faq`
@@ -5569,7 +5570,7 @@ INSERT INTO `ob_faq` (`id`, `vraag`, `antwoord`, `status`, `timestamp`) VALUES
 -- Table structure for table `ob_functies`
 --
 
-CREATE TABLE IF NOT EXISTS `ob_functies` (
+CREATE TABLE `ob_functies` (
   `functie_id` int(11) NOT NULL,
   `naam_functie` varchar(100) NOT NULL,
   `afdeling_id` int(11) NOT NULL
@@ -5581,7 +5582,7 @@ CREATE TABLE IF NOT EXISTS `ob_functies` (
 -- Table structure for table `ob_gender`
 --
 
-CREATE TABLE IF NOT EXISTS `ob_gender` (
+CREATE TABLE `ob_gender` (
   `id` int(11) NOT NULL,
   `gender` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -5600,13 +5601,13 @@ INSERT INTO `ob_gender` (`id`, `gender`) VALUES
 -- Table structure for table `ob_images`
 --
 
-CREATE TABLE IF NOT EXISTS `ob_images` (
+CREATE TABLE `ob_images` (
   `id` int(11) NOT NULL,
   `naam` varchar(100) NOT NULL,
   `type` int(11) NOT NULL COMMENT '1: bannerlogo,2:midlogo,3:sliderimage,4:plattegrond',
   `path` varchar(100) NOT NULL,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ob_images`
@@ -5630,14 +5631,14 @@ INSERT INTO `ob_images` (`id`, `naam`, `type`, `path`, `timestamp`) VALUES
 -- Table structure for table `ob_kalendar`
 --
 
-CREATE TABLE IF NOT EXISTS `ob_kalendar` (
+CREATE TABLE `ob_kalendar` (
   `id` int(11) NOT NULL,
   `type` int(11) NOT NULL COMMENT '0: Evenementen, 1: Payday,2: Feestdagen',
   `title` varchar(100) NOT NULL,
   `start` varchar(100) DEFAULT NULL,
   `end` varchar(100) DEFAULT NULL,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ob_kalendar`
@@ -5660,13 +5661,13 @@ INSERT INTO `ob_kalendar` (`id`, `type`, `title`, `start`, `end`, `timestamp`) V
 -- Table structure for table `ob_mijlpalen`
 --
 
-CREATE TABLE IF NOT EXISTS `ob_mijlpalen` (
+CREATE TABLE `ob_mijlpalen` (
   `id` int(11) NOT NULL,
   `naam` varchar(100) NOT NULL,
   `beschrijving` text NOT NULL,
   `foto` varchar(100) NOT NULL DEFAULT 'img_placeholder.png',
   `timestamp` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ob_mijlpalen`
@@ -5679,15 +5680,37 @@ INSERT INTO `ob_mijlpalen` (`id`, `naam`, `beschrijving`, `foto`, `timestamp`) V
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `ob_post`
+--
+
+CREATE TABLE `ob_post` (
+  `id` int(11) NOT NULL,
+  `post_name` varchar(255) NOT NULL,
+  `post_discription` text NOT NULL,
+  `post_content` text NOT NULL,
+  `post_categorie` text NOT NULL,
+  `post_img` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ob_post`
+--
+
+INSERT INTO `ob_post` (`id`, `post_name`, `post_discription`, `post_content`, `post_categorie`, `post_img`) VALUES
+(1, 'Rij en voertuigenbelasting', 'Rij_en _voertuigenbelasting', 'Rij- en voertuigenbelasting\r\nOp 28 augustus 2018 is in De Nationale Assemblée (DNA) de wet Rij- en Voertuigenbelasting goedgekeurd. Deze bevat regels met betrekking tot de heffing van een rij- en voertuigenbelasting. Met de aanname van deze wet is het verboden om zich op de weg te begeven met een rij- en voertuig waarover er geen belasting is betaald.\r\nAlle gebruikers van de weg zullen deze belasting betalen. Het dagelijks gebruik van de wegen door gebruikers van voertuigen zorgt voor achteruitgang en beschadiging van deze wegen. Jaarlijks kost het de overheid miljoenen om deze wegen te onderhouden. De Staat heeft de verplichting om te zorgen voor begaanbare wegen, maar krijgt niet de nodige bijdrage van de gebruikers. Deze maatregel zal daarom ervoor zorgen dat de inkomsten van de Staat zullen toenemen.\r\nDe Rij- en Voertuigenbelasting wordt per jaar betaald. Bezitters van rij- en voertuigen hebben tot 28 februari 2019 de tijd om voor hun rij- en voertuigenbelasting van 2019 te betalen. Zo zijn er landelijk verschillende locaties waar u deze kunt betalen. Vanaf 1 maart 2019 gaat de controle van de Rij- en Voertuigenbelasting in.\r\nKlik hier voor meer informatie over de jaartarieven per voertuigtype, de betaallocaties en –mogelijkheden.\r\n\r\nhttps://belastingdienst.sr/wp-content/uploads/2018/11/Rij-en-Voertuigenbelasting-2.pdf ', '', 'img/slider/Rij_en_voertuigenbelasting.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `ob_regels`
 --
 
-CREATE TABLE IF NOT EXISTS `ob_regels` (
+CREATE TABLE `ob_regels` (
   `id` int(11) NOT NULL,
   `type` varchar(100) NOT NULL COMMENT '0: Algemene Regel, 1: ICT-Regel',
   `naam` varchar(100) NOT NULL,
   `beschrijving` text NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ob_regels`
@@ -5707,7 +5730,7 @@ INSERT INTO `ob_regels` (`id`, `type`, `naam`, `beschrijving`) VALUES
 (13, '1', 'Informatie', 'Het vrijgeven van informatie welke uitsluitend bestemd is voor gebruik binnen het ministerie.'),
 (14, '1', 'Toegang', 'Het misleiden van de toegangscontrole systemen van een computersysteem.'),
 (15, '1', 'Beveiliging', 'Het uitschakelen van de beveiligingsinstellingen van een computersysteem, inclusief antivirus en Internet browser instellingen.'),
-(16, '1', 'Internet gebruik', 'Het zonder toestemming realiseren van internet toegang of netwerk toegang t.b.v. derden, of peer to peer verbindingen zoals KaZaA of Fast Track network of het publiceren van niet goedgekeurde Internet web pagina''s.'),
+(16, '1', 'Internet gebruik', 'Het zonder toestemming realiseren van internet toegang of netwerk toegang t.b.v. derden, of peer to peer verbindingen zoals KaZaA of Fast Track network of het publiceren van niet goedgekeurde Internet web pagina\'s.'),
 (17, '1', 'Prive gebruik', 'Het gebruik van computersystemen voor persoonlijk gewin, of gewin van derden'),
 (18, '1', 'Oneigenlijk gebruik', 'Het installeren of gebruiken van computersoftware waar het bedrijf geen licentie voor heeft, of waar het management geen toestemming voor gegeven heeft, of het gebruiken of kopiëren van software in tegenspraak met de licentievoorwaarden. Dit omvat ook het opslaan of delen van audio of video bestanden zoals “MP3”,”WMA”, “MPG”, of  “AVI” bestanden.'),
 (19, '1', 'Spam mail', 'Het deelnemen aan zogenaamde ‘kettingmails’ , chatten, of het delen van bestanden en andere activiteiten waarbij de inhoud van het bericht nog de doelgroep ervan een zakelijk doel dient.'),
@@ -5720,7 +5743,7 @@ INSERT INTO `ob_regels` (`id`, `type`, `naam`, `beschrijving`) VALUES
 -- Table structure for table `ob_werknemers`
 --
 
-CREATE TABLE IF NOT EXISTS `ob_werknemers` (
+CREATE TABLE `ob_werknemers` (
   `id` int(11) NOT NULL,
   `naam` varchar(100) NOT NULL,
   `voornaam` varchar(100) NOT NULL,
@@ -5735,7 +5758,7 @@ CREATE TABLE IF NOT EXISTS `ob_werknemers` (
   `pensiondatum` date DEFAULT NULL,
   `profielfoto` varchar(100) NOT NULL DEFAULT 'https://placeimg.com/200/200/people',
   `gender_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=561643 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ob_werknemers`
@@ -6934,6 +6957,12 @@ ALTER TABLE `ob_mijlpalen`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `ob_post`
+--
+ALTER TABLE `ob_post`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `ob_regels`
 --
 ALTER TABLE `ob_regels`
@@ -6956,47 +6985,63 @@ ALTER TABLE `ob_werknemers`
 -- AUTO_INCREMENT for table `ob_admin`
 --
 ALTER TABLE `ob_admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `ob_cao`
 --
 ALTER TABLE `ob_cao`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=63;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+
 --
 -- AUTO_INCREMENT for table `ob_document`
 --
 ALTER TABLE `ob_document`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
 --
 -- AUTO_INCREMENT for table `ob_faq`
 --
 ALTER TABLE `ob_faq`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT for table `ob_images`
 --
 ALTER TABLE `ob_images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
 --
 -- AUTO_INCREMENT for table `ob_kalendar`
 --
 ALTER TABLE `ob_kalendar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=46;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+
 --
 -- AUTO_INCREMENT for table `ob_mijlpalen`
 --
 ALTER TABLE `ob_mijlpalen`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `ob_post`
+--
+ALTER TABLE `ob_post`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `ob_regels`
 --
 ALTER TABLE `ob_regels`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
 --
 -- AUTO_INCREMENT for table `ob_werknemers`
 --
 ALTER TABLE `ob_werknemers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=561643;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=561643;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
