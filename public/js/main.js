@@ -4,17 +4,29 @@ $(function () {
   $("#homeCalendar").fullCalendar({
     themeSystem: "bootstrap4",
     defaultView: "listWeek",
-    locale: "nl"
+    locale: "nl",
+    events: [
+      {
+        title: 'Oudejaarsviering',
+        start: '2018-12-28T13:00',
+        end: '2018-12-28T23:59',
+        url: '#'
+      }
+    ],
+    eventClick: function(calEvent, jsEvent, view) {
+      $('#eventShow').click();
+    }
   });
-
 
   $("#eventCalender").fullCalendar({
     defaultView: 'month',
     locale: "nl",
-    height: 1650,
-    events: [{
+    height: 500,
+    events: [
+      {
         title: 'Oudejaarsviering',
-        start: '2018-12-28',
+        start: '2018-12-28T13:00',
+        end: '2018-12-28T23:59',
         url: '#'
       }
     ],
