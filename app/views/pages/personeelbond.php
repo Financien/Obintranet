@@ -7,7 +7,7 @@ require APPROOT . '/views/inc/header.php';
     <section class="mt-3">
         <div class="row">
             <div class="col ">
-                <h2 class="text-center">Bond Technisch Personeel Directe Belastingen</h2>
+                <h2 class="text-center">Bond Personeel Dienst der belastingen</h2>
                 <hr>
                 <p>Het behoefte geen betoog dat heden ten dage communicatie, in al haar facetten, onontbeerlijk is. In
                     dat kader zie ik daarom het verschijnen van dit interne kwartaalblad. In algemene zin zal het doel

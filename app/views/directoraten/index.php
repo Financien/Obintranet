@@ -4,7 +4,20 @@ require APPROOT . '/views/inc/header.php';
 <div class="container mt-3">
     <div class="row">
         <div class="col-md-3">
-            <img src="<?= URLROOT ?>/img/directoraten/<?= $data['directoraat'] -> foto; ?> " alt="" height="300" width="300">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="<?= URLROOT ?>/img/directoraten/<?= $data['directoraat'] -> foto; ?>" alt="First slide" height="250" width="400">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="..." alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="..." alt="Third slide">
+    </div>
+  </div>
+</div>            
+    <!-- <img src="<?= URLROOT ?>/img/directoraten/<?= $data['directoraat'] -> foto; ?> " alt="" height="300" width="300"> -->
         </div>
         <div class="col-md-9">
             <div class="ml-5">
