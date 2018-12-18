@@ -2,7 +2,7 @@
 //DB Params
 define("DB_HOST", "localhost");
 define("DB_USER", "root");
-define("DB_PASS", "");
+define("DB_PASS", "test");
 define("DB_NAME", "obintranet");
 define("DB_DRIVER", "mysql");
 
