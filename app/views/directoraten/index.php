@@ -4,7 +4,7 @@ require APPROOT . '/views/inc/header.php';
 <div class="container mt-3">
     <div class="row">
         <div class="col-md-3">
-            <img class="img img-fluid rounded-circle" src="<?= APPROOT .  $data['directoraat'] -> foto; ?> " alt="" height="300" width="300">
+            <img src="<?= URLROOT ?>/img/directoraten/<?= $data['directoraat'] -> foto; ?> " alt="" height="300" width="300">
         </div>
         <div class="col-md-9">
             <div class="ml-5">

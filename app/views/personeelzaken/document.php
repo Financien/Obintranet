@@ -14,7 +14,7 @@ require APPROOT . '/views/inc/header.php';
 
      <div class="row">
        <div class="col">
-       <img src = "img/Verlofimg.jpg" height = "300" width = "300">
+       <img src = "<?= URLROOT ?>/img/Verlofimg.jpg" height = "300" width = "300">
         </div>
 
          <div class="col">

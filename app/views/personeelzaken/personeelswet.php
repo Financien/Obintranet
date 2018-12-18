@@ -27,7 +27,7 @@ require APPROOT . '/views/inc/header.php';
     </div>
     <div class="row">
        <div class="col">
-       <img src="<?= URLROOT ?>img/Presoneelswet.png" class="rounded" alt="..." height="300" width="300">
+       <img src="<?= URLROOT ?>/img/Personeelswet.png" class="rounded" alt="..." height="300" width="300">
         </div>
         <div class="col">
             <div class="row">
