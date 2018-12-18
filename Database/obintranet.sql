@@ -26,7 +26,8 @@ DELIMITER $$
 --
 -- Functions
 --
-CREATE DEFINER=`root`@`localhost` FUNCTION `initcap` (`x` CHAR(30)) RETURNS CHAR(30) CHARSET utf8 BEGIN
+CREATE DEFINER=`root`@`localhost` FUNCTION `initcap` (`x` CHAR(30)) RETURNS CHAR(30) CHARSET utf8 READS SQL DATA
+DETERMINISTIC BEGIN
 SET @str='';
 SET @l_str='';
 WHILE x REGEXP ' ' DO
