@@ -18,61 +18,62 @@
       <h4 class="">Quick Tabs</h4>
       <hr>
     </div>
-    <div class="row mt-3">
-      <div class="col-md-3">
-        <div class="card">
-          <div class="card-body text-center">
-            <span class="fa-stack fa-2x">
-              <i class="fas fa-circle fa-stack-2x text-primary"></i>
-              <i class="far fa-newspaper fa-stack-1x fa-inverse"></i>
-            </span>
-            <hr>
-            <h5 class="card-title mt-2">Vacatures</h5>
-            <p class="card-text">Sollicteren voor een nieuwe functie? bekijk onze vacatures</p>
-            <a href="<?= URLROOT ?>pages/vacatures" class="btn btn-outline-primary btn-block">Go here</a>
+    <div class="container-fluid content-row">
+      <div class="row mt-3">
+        <div class="col-md-3">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <span class="fa-stack fa-2x">
+                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                <i class="far fa-newspaper fa-stack-1x fa-inverse"></i>
+              </span>
+              <hr>
+              <h5 class="card-title mt-2">Vacatures</h5>
+              <p class="card-text">Sollicteren voor een nieuwe functie? bekijk onze vacatures</p>
+              <a href="<?= URLROOT ?>pages/vacatures" class="btn btn-outline-primary btn-block">Go here</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card">
-
-          <div class="card-body text-center">
-            <span class="fa-stack fa-2x">
-              <i class="fas fa-circle fa-stack-2x text-primary"></i>
-              <i class="far fa-handshake fa-stack-1x fa-inverse"></i>
-            </span>
-            <hr>
-            <h5 class="card-title mt-2">Personeelsbonden</h5>
-            <p class="card-text">Het Ministerie van Financiën telt 2 personeelsbonden. Lees hier meer over de samenstellingen van onze personeelsbonden.</p>
-            <a href="<?= URLROOT ?>pages/personeelbond" class="btn btn-outline-primary btn-block">Go here</a>
+        <div class="col-md-3">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <span class="fa-stack fa-2x">
+                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                <i class="far fa-handshake fa-stack-1x fa-inverse"></i>
+              </span>
+              <hr>
+              <h5 class="card-title mt-2">Personeelsbonden</h5>
+              <p class="card-text">Het Ministerie van Financiën telt 2 personeelsbonden. Lees hier meer over de samenstellingen van onze personeelsbonden.</p>
+              <a href="<?= URLROOT ?>pages/personeelbond" class="btn btn-outline-primary btn-block">Go here</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card">
-          <div class="card-body text-center">
-            <span class="fa-stack fa-2x">
-              <i class="fas fa-circle fa-stack-2x text-primary"></i>
-              <i class="far fa-calendar fa-stack-1x fa-inverse"></i>
-            </span>
-            <hr>
-            <h5 class="card-title mt-2">Evenemementen</h5>
-            <p class="card-text">Klik hier voor de komende activiteiten</p>
-            <a href="<?= URLROOT ?>activiteiten/evenementen" class="btn btn-outline-primary btn-block">Go here</a>
+        <div class="col-md-3">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <span class="fa-stack fa-2x">
+                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                <i class="far fa-calendar fa-stack-1x fa-inverse"></i>
+              </span>
+              <hr>
+              <h5 class="card-title mt-2">Evenemementen</h5>
+              <p class="card-text">Klik hier voor de komende activiteiten</p>
+              <a href="<?= URLROOT ?>activiteiten/evenementen" class="btn btn-outline-primary btn-block">Go here</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card">
-          <div class="card-body text-center">
-            <span class="fa-stack fa-2x">
-              <i class="fas fa-circle fa-stack-2x text-primary"></i>
-              <i class="fas fa-book-open fa-stack-1x fa-inverse"></i>
-            </span>
-            <hr>
-            <h5 class="card-title mt-2">Wetten</h5>
-            <p class="card-text"> Heb hier toegang tot enkele digitale wetten </p>
-            <a href="<?= URLROOT ?>pages/wetten" class="btn btn-outline-primary btn-block">Go here</a>
+        <div class="col-md-3">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <span class="fa-stack fa-2x">
+                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                <i class="fas fa-book-open fa-stack-1x fa-inverse"></i>
+              </span>
+              <hr>
+              <h5 class="card-title mt-2">Wetten</h5>
+              <p class="card-text"> Heb hier toegang tot enkele digitale wetten </p>
+              <a href="<?= URLROOT ?>pages/wetten" class="btn btn-outline-primary btn-block">Go here</a>
+            </div>
           </div>
         </div>
       </div>
