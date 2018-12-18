@@ -11,7 +11,16 @@ $(function () {
   $("#eventCalender").fullCalendar({
     defaultView: 'month',
     locale: "nl",
-    height: 1650
+    height: 1650,
+    events: [{
+        title: 'Oudejaarsviering',
+        start: '2018-12-28',
+        url: '#'
+      }
+    ],
+    eventClick: function(calEvent, jsEvent, view) {
+      $('#eventShow').click();
+    }
   });
 
   $('.table').DataTable({

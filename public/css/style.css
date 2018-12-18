@@ -4,9 +4,17 @@
 }
 
 .sliderImg {
-    height: auto !important;
-    width: 90% !important;
-    padding-left: 10%;
+    height: 90vh !important;
+    width: auto !important;
+    margin: auto;
+}
+
+@media only screen and (max-width: 794px) {
+    .sliderImg {
+        height: auto !important;
+        width: 95vw !important;
+        margin: auto;
+    }
 }
 
 .carousel-control-prev 
@@ -17,4 +25,18 @@
 .post_img {
     width: 65%;
     height: auto;
+}
+
+.btn_link {
+    color: #fff;
+}
+
+.footer_email,
+.footer_email:hover {
+    color: #fff;
+}
+
+.footer_email_dark,
+.footer_email_dark:hover {
+    color: #000;
 }

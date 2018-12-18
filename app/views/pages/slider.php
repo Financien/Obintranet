@@ -5,12 +5,15 @@ if(count($data['posts']) > 0) {
   <div class="carousel-inner">
     <?php foreach ($data['posts'] as $key => $post) : ?>
     <?php echo ($key == 0 ? '<div class="carousel-item active">' : '<div class="carousel-item">'); ?>
-      <img class="d-block w-100 postImg" src="<?php echo URLROOT . $post->post_img; ?>" alt="First slide">
-      <div class="carousel-caption d-none d-md-block">
+      <img class="d-block w-100 sliderImg" src="<?php echo URLROOT . $post->post_img; ?>" alt="First slide">
+      <!-- <div class="carousel-caption d-none d-md-block"> -->
         <!-- <h1><?php echo $post->post_name; ?></h1> -->
         <!-- <p><?php echo $post->post_content; ?></p> -->
+      <!-- </div> -->
+      <br>
+      <center>
         <a href="pages/post/<?php echo $post->id; ?>" class="btn btn-lg btn-secondary">Lees meer...</a>
-      </div>
+      </center>
     </div>
     <?php endforeach; ?>    
   </div>

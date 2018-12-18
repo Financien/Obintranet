@@ -10,6 +10,8 @@
        <div class="col-md-4">
             <hr class="bg-primary">
             <p>Intranet een besloten online platform speciaal voor personen die verbonden zijn aan het Ministerie van Financiën. Via dit platform wensen wij u, als deel van het Ministerie, intern te informeren over nieuwsjes, activiteiten en tal van andere zaken.</p>
+            <hr class="bg-secondary">
+            <p>Email: <a href="mailto:intranet@finance.gov.sr" class="footer_email">intranet@finance.gov.sr</a></p>
         </div>
         <div class="col-md-4">
             <hr class="bg-primary">
