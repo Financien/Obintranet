@@ -24,15 +24,17 @@ require APPROOT . '/views/inc/header.php';
             <h3><?= $data['directoraat']->directoraat; ?></h3>
             <hr>
             <p><?= $data['directoraat']->beschrijving; ?></p>
-            <div class="mt-5">
-                <span><i class="fas fa-map-marker-alt"></i> Adres. : <?= $data['directoraat']->adress; ?></span>
+            <hr>
+            <?php foreach($data['contacten'] as $contact) : ?>
+            <div class="mt-3">
+                <span><i class="fas fa-map-marker-alt"></i> Adres. : <?= $contact->adress; ?></span>
                 <br>
-                <span><i class="fas fa-phone"></i> Telefoonnr. : <?= $data['directoraat']->telefoon; ?></span>
+                <span><i class="fas fa-phone"></i> Telefoonnr. : <?= $contact->telefoon; ?></span>
                 <br>
-                <span><i class="fa fa-envelope"></i> Email. : <?= $data['directoraat']->email;?><span>
+                <span><i class="fa fa-envelope"></i> Email. : <?= $contact->email;?><span>
                 <br>
-
             </div>
+            <?php endforeach; ?>
             </div>
         </div>
     </div>
