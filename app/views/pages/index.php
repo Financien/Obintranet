@@ -1,4 +1,6 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
+
+<h1 class="SiteName"> Intranet Minsterie van Financien </h1>
 <?php require APPROOT . '/views/pages/slider.php'; ?>
 
   <!-- </div>

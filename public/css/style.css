@@ -54,3 +54,11 @@
 .footer_email_dark:hover {
     color: #000;
 }
+
+.SiteName{
+    text-align: center; 
+    color:#00c1a7; 
+    font-family:Roboto-slab; 
+    font-size: 40px;
+
+}
