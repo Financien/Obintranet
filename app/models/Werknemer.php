@@ -36,7 +36,21 @@ class Werknemer extends Model
 
     public function getAllgepensioeneerden()
     {
-        $gepensioeneerden = Werknemer::where('gepensioneerd', 1)
+        $gepensioeneerden = Werknemer::join('ob_afdelingen', 'ob_werknemers.afdeling_id', '=', 'ob_afdelingen.id')
+            ->join('ob_gender', 'ob_werknemers.gender_id', '=', 'ob_gender.id')
+            ->select(
+                'ob_afdelingen.naam_afdeling',
+                'ob_werknemers.functie',
+                'ob_werknemers.naam',
+                'ob_werknemers.voornaam',
+                'ob_gender.gender',
+                'ob_werknemers.functie',
+                'ob_werknemers.email',
+                // 'ob_werknemers.telefoon',
+                // 'ob_werknemers.leeftijd',
+                'ob_werknemers.pensiondatum'
+            )
+            ->where('ob_werknemers.gepensioneerd', 1)
             ->get();
         return $gepensioeneerden;
     }

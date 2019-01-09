@@ -27,7 +27,7 @@ require APPROOT . '/views/inc/header.php';
             <tbody>
             <?php foreach ($data['gepensioeneerden'] as $gepensioeneerd) : ?>
                 <tr>
-                    <td><?php echo $gepensioeneerd->afdeling_id ?></td>
+                    <td><?php echo $gepensioeneerd->naam_afdeling ?></td>
                     <td><?php echo $gepensioeneerd->functie ?></td>
                     <td><?php echo $gepensioeneerd->naam ?></td>
                     <td><?php echo $gepensioeneerd->voornaam ?></td>
